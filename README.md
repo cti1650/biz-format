@@ -1,6 +1,5 @@
 # biz-format
-
-![画像](https://www.pakutaso.com/shared/img/thumb/TKL0614_25_TP_V.jpg)
+<img src="https://www.pakutaso.com/shared/img/thumb/TKL0614_25_TP_V.jpg" width="100px">
 
 ## 仕様技術
 * [tailwindcss](https://tailwindcss-ja.entap.app/)
