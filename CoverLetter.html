@@ -84,13 +84,15 @@
       <p class="text-sm p-0 text-left">
         <input
           type="text"
-          class="text-lg border-white border-0 underline w-full"
+          class="text-lg border-white border-0 underline w-full" 
+          id="to_Name"
           value="Example 御中"
         />
       </p>
       <p class="text-sm text-left h-auto">
         <textarea
-          class="text-sm text-left break-words border-white border-0 w-full h-full"
+          class="text-sm text-left break-words border-white border-0 w-full h-full" 
+          id="to_Address"
         >
 東京都○○区○○1-2-3
 ○○　○○
@@ -101,12 +103,14 @@
         <input
           type="text"
           class="text-lg text-right border-white border-0 w-full"
+          id="from_Name"
           value="Example Example"
         />
       </p>
       <p class="text-sm text-right h-auto">
         <textarea
           class="text-sm text-right break-words border-white border-0 w-full h-full"
+          id="from_Address"
         >
         東京都○○区○○1-2-3
         ○○　○○
@@ -196,8 +200,36 @@
       <p class="text-right">以上</p>
     </section>
     <script type="text/javascript">
+      function saveValue(selector, key) {
+        if (localStorage.getItem(key)) {
+          document.querySelector(selector).value = localStorage.getItem(key);
+        } else {
+          document
+            .querySelector(selector)
+            .addEventListener("change", function () {
+              localStorage.setItem(key, this.value);
+            });
+        }
+      }
+      function saveTextarea(selector, key) {
+        if (localStorage.getItem(key)) {
+          document.querySelector(selector).innerHTML = localStorage.getItem(
+            key
+          );
+        } else {
+          document
+            .querySelector(selector)
+            .addEventListener("change", function () {
+              localStorage.setItem(key, this.innerHTML);
+            });
+        }
+      }
       (() => {
         document.querySelector("p#today").innerHTML = today();
+        saveValue("input#to_Name", "biz-format_to_Name");
+        saveTextarea("#to_Address", "biz-format_to_Address");
+        saveValue("input#from_Name", "biz-format_from_Name");
+        saveTextarea("#from_Address", "biz-format_from_Address");
         // ==============================================
         //	フォーカス時の背景色リセット
         // ==============================================
