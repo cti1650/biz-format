@@ -9,3 +9,4 @@
 
 ## 参考サイト
 * [［文書］テンプレートの無料ダウンロード](https://template.k-solution.info/2018/03/02082209.html)  
+![画像](https://template.k-solution.info/img/sofujo208_s.jpg)
