@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from 'react'
 import Styles from "./page.module.css"
 
 class Page extends React.Component {
