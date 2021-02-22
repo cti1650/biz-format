@@ -16,7 +16,7 @@ export default ({ children }) => {
         return jpYear + "年" + jpMonth + "月" + jpDate + "日"
       };
   return (<> {/* <React.Fragment>の省略形 */}
-      <section className="page">
+      <section className="{Styles.page}">
       <p className="border-black border-l-8 border-b my-6 py-1 pl-4 h-auto">
         <input
           type="text"
