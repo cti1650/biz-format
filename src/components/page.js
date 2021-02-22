@@ -148,7 +148,6 @@ class PageA4 extends React.Component {
         </li>
       </ol>
       <p className="text-right">以上</p>
-      {children}
     </section>
       </>
     )
