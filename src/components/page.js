@@ -28,4 +28,4 @@ class PageA4 extends React.Component {
     )
   }
 }
-export default PageA4();
+export default PageA4;
