@@ -2,7 +2,7 @@ import React from "react"
 import Styles from "./page.module.css"
 
 const Page = ({ children }) => {
-  today(){
+  const today = () => {
         let utc = new Date()
         //現在時刻とUTCの時差を求める。ハワイなら600分 * 60秒 * 1000ミリ秒
         let offset = utc.getTimezoneOffset() * 60 * 1000 //ローカルタイムとして協定時を出すために時差分調整
