@@ -22,7 +22,7 @@ class PageA4 extends React.Component {
   render() {
     return (
       <> {/* <React.Fragment>の省略形 */}
-        <section className="{Styles.page}">
+        <section className="{Styles.pageA4}">
       <p className="border-black border-l-8 border-b my-6 py-1 pl-4 h-auto">
         <input
           type="text"
