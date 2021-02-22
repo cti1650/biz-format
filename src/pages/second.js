@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Page from "../components/page"
+import PageA4 from "../components/page"
 
 export default () => (
   <PageA4>
