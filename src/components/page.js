@@ -153,4 +153,4 @@ class Page extends React.Component {
   );
     
 }
-export default Page
+export default Page();
