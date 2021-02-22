@@ -24,7 +24,7 @@ export default ({ children }) => {
           value="書類送付のご案内"
         />
       </p>
-      <p id="today" className="text-sm text-right">{today}</p>
+      <p id="today" className="text-sm text-right">{this.today}</p>
       <p className="text-sm p-0 text-left">
         <input
           type="text"
