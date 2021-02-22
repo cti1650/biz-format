@@ -11,7 +11,7 @@ export default ({ children }) => (
           value="書類送付のご案内"
         />
       </p>
-      <p id="today" className="text-sm text-right"></p>
+      <p id="today" className="text-sm text-right">{}</p>
       <p className="text-sm p-0 text-left">
         <input
           type="text"
@@ -132,6 +132,7 @@ export default ({ children }) => (
       {children}
     </section>
     <script type="text/javascript">
+  {
       function today() {
         let utc = new Date()
         //現在時刻とUTCの時差を求める。ハワイなら600分 * 60秒 * 1000ミリ秒
@@ -231,7 +232,8 @@ export default ({ children }) => (
           item.focus()
           item.blur()
         })
-      })()
+      })();
+     }
     </script>
   </>
 )
