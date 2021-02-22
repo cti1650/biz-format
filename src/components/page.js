@@ -20,7 +20,25 @@ class PageA4 extends React.Component {
         let jpDate = timeJP.getDate()
         return jpYear + "年" + jpMonth + "月" + jpDate + "日"
       })(),
+      to_name: "Example 御中",
+      items: [
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+        { val: "" },
+      ],
+      ...props,
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(event) {
+    this.setState({ to_name: event.target.value })
   }
 
   render() {
@@ -36,16 +54,17 @@ class PageA4 extends React.Component {
               value="書類送付のご案内"
             />
           </p>
-          <p id="today" className="text-sm text-right">
+          <p id="today" tw="text-sm text-right">
             {this.state.today}
           </p>
-          <p className="text-sm p-0 text-left">
+          <p tw="text-sm p-0 text-left">
             <input
               type="text"
               className="syncdata"
               tw="text-lg border-white border-0 underline w-full"
               id="to_Name"
-              value="Example 御中"
+              onChange={this.handleChange}
+              value={this.state.to_name}
             />
           </p>
           <p tw="text-sm text-left h-auto">
@@ -88,76 +107,16 @@ class PageA4 extends React.Component {
           <p tw="text-right">敬具</p>
           <p tw="text-center my-8">記</p>
           <ol tw="border-2 border-black border-solid divide-y-2 divide-gray-400 divide-dotted p-0 my-6">
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                value=""
-              />
-            </li>
+            {this.state.items.map((item, index) => (
+              <li>
+                <input
+                  type="text"
+                  tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
+                  value={item.val}
+                  key={index}
+                />
+              </li>
+            ))}
           </ol>
           <p tw="text-right">以上</p>
         </section>
