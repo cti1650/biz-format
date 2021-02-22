@@ -22,7 +22,7 @@
       }
 
       /* 印刷1ページ用のコンテンツはここで定義 */
-      .page {
+      .pageA4 {
         width: 210mm; /* 用紙の横幅を改めて指定 */
         height: 296.5mm; /* 高さには0.5mm余裕をもたせる */
         page-break-after: always;
@@ -36,7 +36,7 @@
         body {
           background: #eee;
         }
-        .page {
+        .pageA4 {
           background: white; /* 背景を白く */
           box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3); /* ドロップシャドウ */
           margin: 5mm;
