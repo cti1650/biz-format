@@ -7,6 +7,7 @@ export default () => (
     <div>
       <p>トップページのメインコンテンツ！</p>
       <Link to={"/second/"}>Secondページへのリンク</Link> {/* 追加 */}
+      <Link to={"/sub/"}>サブコンテンツへのリンク</Link> {/* 追加 */}
     </div>
   </Layout>
 )
