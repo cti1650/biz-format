@@ -147,4 +147,4 @@ const Page = ({ children }) => {
   </>
   );
 }
-export default FirstView
+export default Page
