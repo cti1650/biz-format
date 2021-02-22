@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Styles from "./page.module.css"
 
-class Page extends React.Component {
+class PageA4 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {today: (() => {
@@ -28,3 +28,4 @@ class Page extends React.Component {
     )
   }
 }
+export default PageA4();
