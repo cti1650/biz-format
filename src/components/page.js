@@ -150,7 +150,7 @@ class Page extends React.Component {
       {children}
     </section>
   </>
-  );
-    
+  )
 }
-export default Page();
+}
+export default Page()
