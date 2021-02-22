@@ -1,12 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
+import Page from "../components/page"
 
 export default () => (
-  <Layout>
+  <Page>
     <div>
       <p>2つ目のページのメインコンテンツ！</p>
       <Link to={"/"}>トップページへのリンク</Link>
     </div>
-  </Layout>
+  </Page>
 )
