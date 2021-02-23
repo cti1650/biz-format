@@ -1,7 +1,5 @@
 import * as React from "react"
 import Styles from "./A4.module.css"
-import "tailwindcss/dist/base.css"
-import "twin.macro"
 
 class A4 extends React.Component {
   constructor(props) {

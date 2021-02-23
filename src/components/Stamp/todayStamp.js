@@ -1,5 +1,4 @@
 import * as React from "react"
-// import Styles from "./page.module.css"
 import "tailwindcss/dist/base.css"
 import "twin.macro"
 

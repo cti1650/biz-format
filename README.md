@@ -15,7 +15,7 @@ Excel や Word で書類を作成し印刷するように、
 
 ## サンプル
 
-- [送付状 - CoverLetter](https://cti1650.github.io/biz-format/CoverLetter.html)
+- [送付状 - CoverLetter](https://cti1650.github.io/biz-format/CoverLetter)
 
 ## 参考サイト
 

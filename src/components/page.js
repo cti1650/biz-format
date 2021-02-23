@@ -1,7 +1,6 @@
 import * as React from "react"
 import A4 from "../components/PrintArea/A4"
-import TodayStamp from "../components/Stamp/todayStamp"
-import Styles from "./page.module.css"
+import TodayStamp from "../components/Stamp/TodayStamp"
 import "tailwindcss/dist/base.css"
 import "twin.macro"
 
