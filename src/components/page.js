@@ -25,10 +25,6 @@ class PageA4 extends React.Component {
       ],
       ...props,
     }
-    this.handleChange = this.handleChange.bind(this)
-  }
-  handleChange(event) {
-    this.setState({ to_name: event.target.value })
   }
 
   render() {
