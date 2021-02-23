@@ -1,6 +1,8 @@
 import * as React from "react"
 import A4 from "../components/PrintArea/A4"
 import TodayStamp from "../components/Stamp/TodayStamp"
+import HoldTextBox from "../components/HoldData/HoldTextBox"
+import HoldTextArea from "../components/HoldData/HoldTextArea"
 import "tailwindcss/dist/base.css"
 import "twin.macro"
 
@@ -42,43 +44,38 @@ class PageA4 extends React.Component {
               value="書類送付のご案内"
             />
           </p>
-          <TodayStamp />
+          <TodayStamp tw="text-sm text-right" />
           <p tw="text-sm p-0 text-left">
-            <input
-              type="text"
-              className="syncdata"
+            <HoldTextBox
               tw="text-lg border-white border-0 underline w-full"
-              id="to_Name"
-              onChange={this.handleChange}
-              value={this.state.to_name}
+              data="to_Name"
+              val="Example 御中"
             />
           </p>
           <p tw="text-sm text-left h-auto">
-            <textarea
-              className="syncdata"
+            <HoldTextArea
               tw="text-sm text-left break-words border-white border-0 w-full h-full"
-              id="to_Address"
-            >
-              東京都○○区○○1-2-3 ○○　○○ 000-0000-0000
-            </textarea>
+              data="to_Address"
+              val="東京都○○区○○1-2-3
+              ○○　○○
+              000-0000-0000"
+            />
           </p>
           <p tw="text-lg p-0 text-right">
-            <input
-              type="text"
-              className="syncdata"
+            <HoldTextBox
               tw="text-lg text-right border-white border-0 w-full"
-              id="from_Name"
-              value="Example Example"
+              data="from_Name"
+              val="Example Example"
             />
           </p>
           <p tw="text-sm text-right h-auto">
-            <textarea
-              className="syncdata"
+            <HoldTextArea
               tw="text-sm text-right break-words border-white border-0 w-full h-full"
-              id="from_Address"
-            >
-              東京都○○区○○1-2-3 ○○　○○ 00-0000-0000
-            </textarea>
+              data="from_Address"
+              val="東京都○○区○○1-2-3
+              ○○　○○
+              000-0000-0000"
+            />
           </p>
           <p tw="text-left break-words mt-8">
             拝啓　時下ますますご清栄のこととお喜び申し上げます。平素は格別のお引き立てを賜り
@@ -95,11 +92,9 @@ class PageA4 extends React.Component {
           <ol tw="border-2 border-black border-solid divide-y-2 divide-gray-400 divide-dotted p-0 my-6">
             {this.state.items.map((item, index) => (
               <li>
-                <input
-                  type="text"
+                <HoldTextBox
                   tw="text-xl text-left py-1 px-4 tracking-widest border-white border-0 w-full"
-                  value={item.val}
-                  key={index}
+                  data={"comment_" + index}
                 />
               </li>
             ))}
