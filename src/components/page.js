@@ -1,4 +1,6 @@
 import * as React from "react"
+import A4 from "../components/PrintArea/A4"
+import TodayStamp from "../components/Stamp/todayStamp"
 import Styles from "./page.module.css"
 import "tailwindcss/dist/base.css"
 import "twin.macro"
@@ -7,19 +9,6 @@ class PageA4 extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      today: (() => {
-        let utc = new Date()
-        //現在時刻とUTCの時差を求める。ハワイなら600分 * 60秒 * 1000ミリ秒
-        let offset = utc.getTimezoneOffset() * 60 * 1000 //ローカルタイムとして協定時を出すために時差分調整
-
-        utc = new Date(utc.getTime() + offset)
-        //日本時間に調整(UTC+9)
-        let timeJP = new Date(utc.getTime() + 9 * 60 * 60 * 1000)
-        let jpYear = timeJP.getFullYear()
-        let jpMonth = timeJP.getMonth() + 1
-        let jpDate = timeJP.getDate()
-        return jpYear + "年" + jpMonth + "月" + jpDate + "日"
-      })(),
       to_name: "Example 御中",
       items: [
         { val: "" },
@@ -46,7 +35,7 @@ class PageA4 extends React.Component {
       <>
         {" "}
         {/* <React.Fragment>の省略形 */}
-        <section className={Styles.pageA4}>
+        <A4>
           <p tw="border-black border-l-8 border-b my-6 py-1 pl-4 h-auto">
             <input
               type="text"
@@ -54,9 +43,7 @@ class PageA4 extends React.Component {
               value="書類送付のご案内"
             />
           </p>
-          <p id="today" tw="text-sm text-right">
-            {this.state.today}
-          </p>
+          <TodayStamp />
           <p tw="text-sm p-0 text-left">
             <input
               type="text"
@@ -119,7 +106,7 @@ class PageA4 extends React.Component {
             ))}
           </ol>
           <p tw="text-right">以上</p>
-        </section>
+        </A4>
       </>
     )
   }
