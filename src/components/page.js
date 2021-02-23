@@ -40,7 +40,7 @@ class PageA4 extends React.Component {
             <input
               type="text"
               tw="text-xl text-left py-1 tracking-widest border-white border-0 w-full"
-              value="書類送付のご案内"
+              value="資機材送付のご案内"
             />
           </p>
           <TodayStamp />
